@@ -67,6 +67,44 @@ About to write to C:\Users\user pc\Desktop\Node\learnpackage\package.json:
 Is this OK? (yes) yes
 
 
-> install any package 
+> install any package :- npm i bcryptjs jsonwebtoken
 
 npm i packagename
+
+git command :- 
+git init 
+git add .
+git commit -m " "
+git push 
+
+
+04:- 
+node module :-  all the package that we are installed bcryptjs( no dev dependencies) , jsonwebtoken
+package-lock:- dependency treee ( u cant modify here )  require :- other package need  
+heavy folder :- node module ( we never transfer this file )  
+npm i :- it will automatically go inside the package json look for all dependecy and install it apart 
+from thios it wiill see what other compatable to version from package lock and installit 
+
+.git ignore :-  create a file in application and write the folder which u dont want to push to git write here 
+
+
+json web tokken :- supporting library will also installed 
+
+force resolution  :- for npm i 
+
+readme.md :- md stand for mark down 
+it is detailed description of the project 
+
+#details description 
+
+
+extension :- 
+vs :- vscode icon 
+git history 
+git lens   :- give git details 
+spellcheck 
+eslint :- standard of code 
+tabnine :- ai suggestion 
+
+chrome extension :-  json viewer   :- to see json data properly 
+
