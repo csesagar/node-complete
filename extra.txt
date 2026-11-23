@@ -10,6 +10,63 @@ gitbash :-
 github account :- 
 
 node js :- 
-single thred , async , non block i/o
+single thread , async , non block i/o
 event loop based structure  
- 
+
+03:- 
+ npm :- node package manager
+ contain all package 
+ json:-
+ javascript object notation
+ way to reprsent data 
+ key value 
+ {
+    "key" : "value"
+ }
+ support unstructured form of data 
+
+ package.json
+ > entry point to the application 
+ > contain all the package used in app 
+ > scripts (start , test )
+ > meta data ( name , version , description)
+
+ // generate this file :- npm init 
+ node -v 
+
+package name: (learnpackage) testapp
+version: (1.0.0) 
+description: this is about node js
+entry point: (index.js) 
+test command: 
+git repository: 
+keywords: node express
+author: node
+license: (ISC) 
+type: (commonjs) 
+About to write to C:\Users\user pc\Desktop\Node\learnpackage\package.json:
+
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "this is about node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "node",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+Is this OK? (yes) yes
+
+
+> install any package 
+
+npm i packagename
