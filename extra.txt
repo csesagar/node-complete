@@ -1,0 +1,15 @@
+01
+node js 
+ frontend + backend + database + cloud
+
+02
+download visual studio code 
+create one new folder
+install node js (lts)
+gitbash :- 
+github account :- 
+
+node js :- 
+single thred , async , non block i/o
+event loop based structure  
+ 
