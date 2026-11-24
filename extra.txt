@@ -252,3 +252,78 @@ let port = process.env.PORT || 6700;
 plan :- 
 
 add data folder 
+here category and product data are there 
+from there copy that and used in app.js  for showinhg static data 
+ express router : when we have multiple route and to handle this we use express router 
+
+
+ let categoryRouter = express.Router();
+
+ categoryRouter.route('/details').get((req,res)=>{     
+    res.send("category details")
+});
+
+app.use('/category',categoryRouter);  
+
+now another method with code seperation 
+
+create one folder src ---- view and controller 
+
+now in controoler put all code related to that field like for category put all code of category amdf in the last 
+export it 
+module.exports = categoryRouter;
+
+and in app.js u have to import it 
+let categoryRouter = require('./src/controller/categoryRouter');
+let productRouter = require('./src/controller/productRouter');
+
+
+10:-
+morgan :- it is package work on middleware ( supporting library )   :- it give the logs of routes that heat 
+let morgan = require('morgan');
+let fs = require('fs');
+
+app.use(morgan('dev'));
+
+server is running on port 7000
+GET /category 200 14.731 ms - 323
+GET /favicon.ico 404 3.129 ms - 150
+
+
+app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}))   // it will store the log in app.log 
+
+app.use('/category',categoryRouter);  // app.use  // it is type of custom middleware where u write logic apart from that 
+
+ejs :- embedded javascript template 
+create a public folder 
+now here u have to specify the things 
+1> where all mine static file are present 
+2> where all html file present  :- here the extension will be ejs 
+
+3> view engine 
+
+
+
+// static file path
+app.use(express.static(__dirname+'/public'))
+// html file path
+app.set('views','./src/views')
+//view engine
+app.set('view engine','ejs')
+
+//default
+app.get('/',(req,res) => {
+   // res.send('Hii From Express')
+   res.render('index',{title:'Home Page',menu})  // here we use render 
+})
+
+
+ res.render('index',{title:'Home Page',menu})    pass the data in ejs 
+
+ let menu = [
+    { name:'Category',link:'/category'},
+    { name:'Products',link:'/products'}
+]
+
+<h1> hi from ejs <%=title%> <h1>
+
