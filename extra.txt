@@ -108,3 +108,51 @@ tabnine :- ai suggestion
 
 chrome extension :-  json viewer   :- to see json data properly 
 
+
+05:- 
+
+dependency :- 
+local :- what u install default 
+they are local to folder in which u install the file or specific folder 
+
+global :- install in the laptop
+can be used for any app 
+only used before the app start 
+used to generate the app / run the app 
+will not add  in package json 
+need admin permission to   install it 
+
+
+dev depencies :-  they are local to folder 
+only depencies used at time of development 
+not require in term of prductiont    
+
+
+install :- npm i package name --save-dev
+
+
+npm i chai --save-dev
+
+
+ "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "chai": "^6.3.0"
+  }
+
+  devDependencies :- deveops people will ignore this in production 
+inbuilt package in node js :- fs  
+
+ let os = require('os');   // in built file 
+ console.log(os.platform());
+C:\Users\user pc\Desktop\Node\inbuilt>node os.js
+win32
+
+
+callback will invoked automatically :- ()=>{
+
+}
+it automatically get executed when the task is done 
