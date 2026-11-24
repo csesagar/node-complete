@@ -165,3 +165,34 @@ unlink :- delete
 rename :- rename 
 
  buffer :- format it which store and read the dat a , it will come if we dont give encoding 
+
+ 07:- 
+
+ http :- by default it is availble to create the server othrwise we are using the express
+
+ when u   run then open the browser and run the http://localhost:7600/    url 
+
+
+ static api :- 
+   // static api because we are not connected to database 
+
+   package.json :- 
+   npm init -yes
+    "scripts": {
+    "start": "node startapi.js"
+  },
+
+  npm i :- to install all the package 
+
+  npm start  :- in start u dont have to put run 
+  npm run dev 
+  nodemon :- if u want to start the server automatically when u make any change 
+  and it is global package 
+
+
+  // step to install global package 
+  open the cmd as admin 
+  npm i -g nodemon  // -g is stand for global // nodemon :- continous development 
+
+08:- 
+

@@ -1,0 +1,14 @@
+{
+  "name": "inbuilt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node startapi.js",
+    "dev": "nodemon http.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
