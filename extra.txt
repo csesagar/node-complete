@@ -156,3 +156,12 @@ callback will invoked automatically :- ()=>{
 
 }
 it automatically get executed when the task is done 
+ fs :-
+writefile :- write
+appendfilev :- add
+readFile :- read
+readFileSync :- read synchronously
+unlink :- delete
+rename :- rename 
+
+ buffer :- format it which store and read the dat a , it will come if we dont give encoding 
