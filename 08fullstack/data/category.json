@@ -1,4 +1,4 @@
-db.catgeory.insert(
+// db.catgeory.insert(
 [
     {
         "id":1,
@@ -20,4 +20,5 @@ db.catgeory.insert(
         "category": "Footwear",
         "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
     }
-])
+]
+// )
