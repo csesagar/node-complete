@@ -24,13 +24,19 @@ const category = [
         "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
     }
 ]
-
-
+// let menu = [
+//     { name:'Category',link:'/category'},
+//     { name:'Products',link:'/products'}
+// ]
+function router(menu){     // it will take data from app.js 
 categoryRouter.route('/').get((req,res)=>{     // here we define it for categoryRouter
-    res.send(category)
+    // res.send(category)
+    res.render('category',{title:'category page ', category,menu})   // destructing
 });
 categoryRouter.route('/details').get((req,res)=>{     
     res.send("category details")
 });
+return categoryRouter    // return it 
+}
 
-module.exports = categoryRouter;
+module.exports = router;    // export the data 

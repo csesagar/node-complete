@@ -327,3 +327,25 @@ app.get('/',(req,res) => {
 
 <h1> hi from ejs <%=title%> <h1>
 
+
+12:- 
+   <% for(i=0;i<category.length;i++){ %>
+    <%}%>
+
+     res.render('category',{title:'category page ', category})   // destructing
+
+     let categoryRouter = require('./src/controller/categoryRouter')(menu); 
+
+     function router(menu){     // it will take data from app.js 
+categoryRouter.route('/').get((req,res)=>{     // here we define it for categoryRouter
+    // res.send(category)
+    res.render('category',{title:'category page ', category,menu})   // destructing
+});
+categoryRouter.route('/details').get((req,res)=>{     
+    res.send("category details")
+});
+return categoryRouter    // return it 
+}
+
+module.exports = router;    // export the data 
+

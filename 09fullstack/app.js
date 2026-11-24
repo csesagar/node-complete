@@ -1,5 +1,5 @@
 let express = require('express');   // import the express
-let  app = express();  // here we are making object of the express and from there we are getting access of there methods 
+let app = express();  // here we are making object of the express and from there we are getting access of there methods 
 let dotenv = require('dotenv');   /// get the value from the env file 
 dotenv.config()
 let port = process.env.PORT || 6700;
@@ -7,8 +7,12 @@ let menu = [
     { name:'Category',link:'/category'},
     { name:'Products',link:'/products'}
 ]
-let categoryRouter = require('./src/controller/categoryRouter');
+// let categoryRouter = require('./src/controller/categoryRouter');
+// let productRouter = require('./src/controller/productRouter');
+
+let categoryRouter = require('./src/controller/categoryRouter')(menu);    // u can pass the data in this 
 let productRouter = require('./src/controller/productRouter');
+
 
 let morgan = require('morgan');
 let fs = require('fs');
@@ -30,7 +34,6 @@ app.get('/',(req,res) => {
    // res.send('Hii From Express')
    res.render('index',{title:'Home Page',menu})  // here we use render 
 })
-
 
 
 app.use('/category',categoryRouter);   // binding here categoryRouter with route    // it is type of custom middleware where u write logic apart from that 
