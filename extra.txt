@@ -245,3 +245,10 @@ var a = 10;
 let dotenv = require('dotenv');    // get the value from env file 
 dotenv.config()
 let port = process.env.PORT || 6700;
+
+
+09:- 
+
+plan :- 
+
+add data folder 
