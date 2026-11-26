@@ -349,3 +349,138 @@ return categoryRouter    // return it
 
 module.exports = router;    // export the data 
 
+13:- 
+
+database :- 
+nosql :-  unstructured
+json 
+[
+  {
+    "key": "value"
+  }
+]
+
+
+setup:- 
+>local :- 
+open mongodb.com 
+community server  download it 
+create a data folder in c:/ drive 
+inside the data folder create db folder
+c:/data/db 
+
+>cloud :- 
+
+first go to http://www.mongodb.com
+try free
+sign with google
+
+*network asccess
+>0.0.0.0/0
+* database access
+test 
+IoMA5Q3LZgl57kKz
+built in role :- atlas admin 
+add user 
+
+default port :- mongo db run :- 27017
+
+server 
+C:\Users\user pc>cd C:\Program Files\MongoDB\Server\7.0\bin
+
+C:\Program Files\MongoDB\Server\7.0\bin>C:\Program Files\MongoDB\Server\7.0\bin
+
+
+14:- 
+
+Default Port > 27017
+
+// Start mongo server (should always running if using in app)
+> open the cmd
+> go inside bin folder
+C:/programfile/mongodb/server/5.0.1/bin
+> cd C:/programfile/mongodb/server/5.0.1/bin
+> mongod
+> do not close this cmd
+
+// Start mongo Client (Need to test query)
+> open the cmd
+> go inside bin folder
+C:/programfile/mongodb/server/5.0.1/bin
+> cd C:/programfile/mongodb/server/5.0.1/bin
+> mongo
+
+commands :- 
+show dbs  :- show the database 
+use databasename :- to go inside any database
+show collections :- it will show all collection inside the database 
+db.collectionname.find()  :- to see data inside the collection 
+db.collectionname.find().pretty() :- show data in proper way 
+use dbname :- create database 
+without data database will not create 
+
+db.user.inser({"name":"arun"}) :- insert into database 
+here _id will created , its is primary key always unique and 12byte in size all  record have this implicitly or explicitly 
+ 5 byte :- random number 
+ 3 byte :- series 
+ 4 byte - timestamp 
+
+15:- 
+
+C:\Users\user pc>mongod --version
+db version v9.0.8
+Build Info: {
+    "version": "9.0.8",
+    "gitVersion": "115a0fe2dcd8edd5bacd4557bd2e741a8e080665",
+    "modules": [],
+    "allocator": "tcmalloc-gperf",
+    "javascriptEngine": "mozjs-wasm",
+    "environment": {
+        "distmod": "windows",
+        "distarch": "amd64",
+        "target_arch": "amd64"
+    }
+}
+
+C:\Users\user pc>
+
+
+install mododb community and the shell 
+in environment set the C:\Program Files\MongoDB\Server\9.0\bin in path 
+>mongod --version
+>mongosh
+
+db.products.find({Brand:"gucci","color":"white"})
+
+
+
+npm i mongodb@4.13.0
+
+
+
+let categoryRouter = express.Router();
+let mongodb = require('mongodb').MongoClient;
+let url = process.env.MONGO_URL;
+
+function router(menu){
+
+    categoryRouter.route('/')
+        .get((req,res) => {
+            mongodb.connect(url,function(err,dc){
+             if(err){
+                res.status(500).send('Error While connecting')
+             }else{
+                let dbObj = dc.db('firstdb');
+                dbObj.collection('catgeory').find().toArray(function(err,category){
+                    if(err){
+                        res.status(203).send('Error While Fetching')
+                    }else{
+                        res.render('category',{title:'Category Page',category,menu})
+                    }
+                })
+             }
+            })    
+        
+    })
+
+    
