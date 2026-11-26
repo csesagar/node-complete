@@ -1,9 +1,7 @@
 let express = require("express"); // import the express
-
 let categoryRouter = express.Router();
 let mongodb = require("mongodb").MongoClient;
 let url = process.env.MONGO_URL;
-
 function router(menu) {
   categoryRouter.route("/").get((req, res) => {
     mongodb.connect(url, function (err, dc) {
@@ -28,10 +26,14 @@ function router(menu) {
       }
     });
   });
+
+
+
+
+
   categoryRouter.route("/details").get((req, res) => {
     res.send("category details");
   });
   return categoryRouter; // return it
 }
-
 module.exports = router; // export the data

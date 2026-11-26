@@ -483,4 +483,45 @@ function router(menu){
         
     })
 
-    
+    16:- 
+     param:- 
+     > what we pass after /
+     > need to define in route and compulsory to pass 
+     
+     queryparam:- 
+     > what we pass after ?
+     > no need to define in router 
+
+     body :- 
+     > what we pass from the form 
+
+
+     third party api :- 
+     npm i ejs:- for ui  express :- for server  request :- for using which we are going to call third party api 
+
+
+     17:- 
+let request = require("request");
+  request(url, (err, response) => {    // request used to call third party api
+   
+    if (err) throw err;
+    //res.send(response.body)
+    const output = JSON.parse(response.body); // convert it in json format
+    res.render("index", { title: "Weather App", result: output });
+    // res.send(response.body)
+  });  
+      
+      redis:- 
+
+      it is caching memory 
+      redis default port server :- 6379
+
+      redis-cli :- client 
+      key *
+      set key value 
+      get keyname
+      del keyname 
+      flushall
+
+      set keyname value ex time   // it will automatically deleted after that timestamp
+      
