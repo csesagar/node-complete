@@ -524,4 +524,11 @@ let request = require("request");
       flushall
 
       set keyname value ex time   // it will automatically deleted after that timestamp
-      
+
+
+      >npm i axios express redis@3.1.2
+
+      i installed memurai-cli just simmilar to redis 
+
+18:- 
+
