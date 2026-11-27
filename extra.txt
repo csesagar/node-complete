@@ -586,3 +586,34 @@ Go to your Google Account.             generate gmail app password
 
 
 21:-
+ mongodd account :- 
+ cloud.mongodb.com
+ > database access :- add user 
+ > network access :- add ip 
+
+ database :- browse collection 
+ add ur data then go back to database 
+ click connect :-  connect with application :- here u will find the connecting url copy it 
+ and using this u will connect to mongodb cloud 
+
+
+ > show collections 
+ > db.resturant.find({condition},{projection}).sort({cost:1}).skip(3).limit(3)
+ > projection :- it will only give what u want to show 
+
+
+update:- 
+
+db.users.update({condition},{values})  :-  
+db.users.update({"_id=3"},{$set:{
+  "address":"654 model town",
+  "city": "pune"
+}},{
+  multi : true    // if u want to update all where u satisfy the condition otherwise it will updaye only one 
+}) 
+
+d.user.remove({}) :- remove all data 
+d.user.remove({"_id=3"})   :- particular records
+
+22:- 
+
