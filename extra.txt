@@ -617,3 +617,4 @@ d.user.remove({"_id=3"})   :- particular records
 
 22:- 
 
+C:\Users\user pc\Desktop\Node\zomatoapi>npm i body-parser cors dotenv express mongodb

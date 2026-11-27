@@ -1,4 +1,5 @@
 //page 1
+C:\Users\user pc\Desktop\Node\zomatoapi>npm i body-parser cors dotenv express mongodb
 
 * List of all cities
 > http://localhost:1221/location
