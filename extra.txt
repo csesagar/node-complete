@@ -531,4 +531,24 @@ let request = require("request");
       i installed memurai-cli just simmilar to redis 
 
 18:- 
+babel :- it convert ecma code into backward compatablie
+npm install @babel/core @babel/register @babel/preset-env
+ create one file babelrc : 
+ {
+    "presets":[
+        "@babel/preset-env"
+    ]
+} 
+
+create one file start.js :- 
+require('@babel/register')({
+  presets: ['@babel/preset-env']
+});
+
+module.exports = require('./app.js');
+
+
+and install command :- npm.cmd install @babel/core@7 @babel/register@7 @babel/preset-env@7
+
+"dev": "nodemon start.js"
 
