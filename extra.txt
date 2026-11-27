@@ -552,3 +552,16 @@ and install command :- npm.cmd install @babel/core@7 @babel/register@7 @babel/pr
 
 "dev": "nodemon start.js"
 
+
+github:- 
+
+
+19:- 
+
+redis mongodb babel  latest connection 
+
+20:- 
+ body-parser :- it is required to read the value from the form 
+ C:\Users\user pc\Desktop\Node\imageupload>npm i body-parser ejs express express-fileupload
+
+ 
