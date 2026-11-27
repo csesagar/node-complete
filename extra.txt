@@ -562,6 +562,27 @@ redis mongodb babel  latest connection
 
 20:- 
  body-parser :- it is required to read the value from the form 
- C:\Users\user pc\Desktop\Node\imageupload>npm i body-parser ejs express express-fileupload
+ C:\Users\user pc\Desktop\Node\imageupload>npm i body-parser ejs express express-fileupload :- 
 
- 
+ mv :- move 
+
+ >npm i ejs express formidable
+
+to upload the file :- 
+ express-fileupload'
+ formidable
+
+
+mailer :- 
+C:\Users\user pc\Desktop\Node\emailwithnode>npm i dotenv nodemailer
+
+Go to your Google Account.             generate gmail app password  
+01   Select Security.
+02   Under "Signing in to Google," select App Passwords. You may need to sign in. ...
+03   At the bottom, choose Select app and choose the app you using Select device and choose the
+     device you're using. ...
+04   Follow the instructions to enter the App Password. ...
+05   Tap Done.
+
+
+21:-
