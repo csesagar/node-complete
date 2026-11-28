@@ -618,3 +618,21 @@ d.user.remove({"_id=3"})   :- particular records
 22:- 
 
 C:\Users\user pc\Desktop\Node\zomatoapi>npm i body-parser cors dotenv express mongodb
+
+
+cors:- cross origin resource sharing  , frontend and backend in different port so to manage this we use cors 
+
+
+24 :- 
+
+function getData(colName,query){
+    if(colName && query){
+        db.collection(colName).find(query).toArray((err,data) => {
+            if(err) throw err;
+            return data
+        })
+    }else{
+        return 'Data Missing'
+    }
+}     // we cant write asyn await and callback at same time 
+
